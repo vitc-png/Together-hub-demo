@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta name="tg-demo" content="1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Together Hub</title>
+<link rel="stylesheet" href="../assets/app.css">
+<script src="../assets/app.js" defer></script>
+</head>
+<body>
+<div style="background:#040606;color:#fff;font-size:14px;line-height:1.5;padding:8px 16px;text-align:center;position:relative;z-index:60"><b style="color:#ff7e1c">เว็บตัวอย่าง (Demo)</b> · ข้อมูลสมมติทั้งหมด · ปุ่มบันทึกและส่งข้อมูลไม่ทำงานจริง — ระบบจริงติดตั้งบนเซิร์ฟเวอร์บริษัท</div>
+<div class="min-h-screen">
+  <header class="border-b border-line bg-white">
+  <div class="mx-auto flex max-w-[1200px] flex-wrap items-center gap-x-3 gap-y-3 px-4 py-3 md:gap-x-8 md:px-6">
+    <a href="../home/" aria-label="Together Hub หน้าแรก" class="flex shrink-0 items-center no-underline">
+      <span class="relative inline-block w-fit self-start" data-brand-logo data-animate>
+  <img src="../brand/together-hub-logo-160.webp" width="591" height="160" alt="Together Hub" class="select-none h-10 w-auto lg:h-12" draggable="false">
+  <svg aria-hidden="true" viewBox="0 0 1645 445" class="pointer-events-none absolute inset-0 hidden h-full w-full overflow-visible" fill="none">
+    <defs>
+      <filter id="tg-zap-blur" x="-20%" y="-50%" width="140%" height="200%"><feGaussianBlur stdDeviation="9"/></filter>
+    </defs>
+    <circle class="tg-horn-l" cx="1318" cy="78" r="62" fill="#ff7e1c" filter="url(#tg-zap-blur)"/>
+    <circle class="tg-horn-r" cx="1577" cy="78" r="62" fill="#ff7e1c" filter="url(#tg-zap-blur)"/>
+        <path class="tg-zap" d="M1368,118 C1335,118 1300,114 1293,90 C1287,66 1318,48 1354,40 L1380,24 L1402,42 L1428,16 L1450,38 L1474,14 L1497,36 L1518,22 L1541,40 C1577,48 1608,66 1602,90 C1595,114 1560,118 1527,118" pathLength="100" stroke="#ff7e1c" stroke-width="34" stroke-linecap="round" stroke-linejoin="round" filter="url(#tg-zap-blur)"/>
+    <path class="tg-zap" d="M1368,118 C1335,118 1300,114 1293,90 C1287,66 1318,48 1354,40 L1380,24 L1402,42 L1428,16 L1450,38 L1474,14 L1497,36 L1518,22 L1541,40 C1577,48 1608,66 1602,90 C1595,114 1560,118 1527,118" pathLength="100" stroke="#ff9a3d" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+    <path class="tg-zap" d="M1368,118 C1335,118 1300,114 1293,90 C1287,66 1318,48 1354,40 L1380,24 L1402,42 L1428,16 L1450,38 L1474,14 L1497,36 L1518,22 L1541,40 C1577,48 1608,66 1602,90 C1595,114 1560,118 1527,118" pathLength="100" stroke="#fff4d6" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</span>
+    </a>
+
+    <!-- เมนูบนจอคอม (กว้าง 1024px ขึ้นไป) — จอเล็กกว่านั้นใช้แถบล่างแทน -->
+    <nav aria-label="เมนูหลัก" class="hidden flex-1 flex-nowrap gap-x-5 whitespace-nowrap text-[15px] lg:flex">
+      <a href="../home/" class="py-2 no-underline border-b-[3px] border-orange font-bold" aria-current="page">หน้าแรก</a><span role="link" aria-disabled="true" title="กำลังพัฒนา" class="cursor-not-allowed text-gray-700 py-2 no-underline hover:text-charcoal" >หนังสือออก<span class="sr-only"> (กำลังพัฒนา ยังใช้งานไม่ได้)</span></span><span role="link" aria-disabled="true" title="กำลังพัฒนา" class="cursor-not-allowed text-gray-700 py-2 no-underline hover:text-charcoal" >HR<span class="sr-only"> (กำลังพัฒนา ยังใช้งานไม่ได้)</span></span><span role="link" aria-disabled="true" title="กำลังพัฒนา" class="cursor-not-allowed text-gray-700 py-2 no-underline hover:text-charcoal" >ลูกค้าและคู่ค้า<span class="sr-only"> (กำลังพัฒนา ยังใช้งานไม่ได้)</span></span><span role="link" aria-disabled="true" title="กำลังพัฒนา" class="cursor-not-allowed text-gray-700 py-2 no-underline hover:text-charcoal" >ผู้ช่วย AI<span class="sr-only"> (กำลังพัฒนา ยังใช้งานไม่ได้)</span></span>    </nav>
+
+    <div class="ml-auto flex items-center gap-2 md:gap-3">
+      <label class="hidden h-11 w-60 items-center gap-2 rounded-xs border border-line-strong bg-white px-3 xl:flex">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-[18px] text-gray-700"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>        <span class="sr-only">ค้นหา</span>
+        <input type="search" placeholder="ค้นหนังสือ คน ลูกค้า…" class="min-w-0 flex-1 bg-transparent text-[15px] outline-none">
+      </label>
+      <button type="button" aria-label="การแจ้งเตือน 4 รายการ" class="relative flex size-11 items-center justify-center rounded-xs border border-line-strong bg-white">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-5"><path d="M6 8a6 6 0 1 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0"/></svg>                  <span class="absolute -right-1.5 -top-1.5 flex h-5 min-w-5 items-center justify-center rounded-full bg-status-rejected text-xs font-bold text-white">4</span>
+              </button>
+      <span title="สมชาย ตัวอย่าง · ฝ่ายออกแบบ" class="flex items-center gap-2.5">
+        <span class="flex size-10 items-center justify-center rounded-full bg-charcoal text-[15px] font-bold text-white">สต</span>
+        <span class="sr-only">สมชาย ตัวอย่าง สถาปนิก · ฝ่ายออกแบบ</span>
+      </span>
+      <form action="#" data-demo-next="../" method="post" class="hidden lg:block">
+                <button type="submit" class="h-11 px-2 text-sm font-bold text-gray-700 underline underline-offset-4">ออกจากระบบ</button>
+      </form>
+    </div>
+  </div>
+</header>
+  <main class="mx-auto flex max-w-[1200px] flex-col gap-12 px-4 pb-12 pt-6 md:px-6 md:pt-8">
+    <!-- ── ต้อนรับ ─────────────────────────────────────────── -->
+<section aria-labelledby="hello" class="flex flex-wrap border border-line bg-white">
+  <div class="flex min-w-0 flex-[999_1_520px] flex-col justify-center gap-5 px-6 py-10 md:px-12 md:py-14">
+    <div class="relative pl-6 pt-6">
+      <span aria-hidden="true" class="absolute left-0 top-0 bg-orange w-12 h-2"></span><span aria-hidden="true" class="absolute left-0 top-0 bg-orange w-2 h-12"></span>      <p class="text-[13px] font-bold tracking-[0.12em] text-gray-700">วันพฤหัสบดีที่ 29 ตุลาคม 2569</p>
+      <h1 id="hello" class="mt-1 text-[28px] font-bold leading-snug md:text-[40px]">สวัสดี คุณสมชาย</h1>
+    </div>
+    <p class="max-w-[34em] text-lg text-charcoal">
+              มีงานรอคุณ <b>3 เรื่อง</b> และหนังสือของคุณกำลังรออนุมัติ <b>2 ฉบับ</b> —
+        ทุกอย่างของบริษัทอยู่ในที่เดียว
+          </p>
+    <div class="mt-2 flex flex-wrap gap-3">
+      <div data-checkin class="contents">
+  <div data-checkin-done class="hidden basis-full flex-wrap items-center gap-3">
+    <span role="status" class="flex h-12 items-center justify-center gap-2 rounded-xs bg-status-approved-bg px-5 font-bold text-status-approved">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" class="size-5"><path d="M5 12l5 5 9-10"/></svg> ลงเวลาแล้ว <span data-checkin-time></span> น.
+    </span>
+    <!-- น้องขวัญข้าวเด้งขึ้นมาทักเฉพาะตอนเพิ่งกด -->
+    <span data-checkin-greet class="hidden items-center gap-2 animate-pop">
+      <img src="../mascots/khwan-khao-256.webp" width="56" height="51" alt="" class="select-none " draggable="false" loading="lazy">      <span class="rounded-xs border border-line bg-surface px-3 py-2 text-sm text-charcoal"><b>น้องขวัญข้าว:</b> <span data-greet-text></span></span>
+    </span>
+  </div>
+      <button type="button" data-checkin-btn class="flex h-12 items-center justify-center gap-2 rounded-xs bg-orange px-6 text-base font-bold text-ink hover:brightness-95 disabled:opacity-60">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> <span data-label>ลงเวลาเข้างาน</span>
+    </button>
+    <p role="alert" data-checkin-error class="hidden basis-full text-sm font-bold text-status-rejected"></p>
+  </div>
+      <a href="#tasks" class="flex h-12 items-center rounded-xs border border-line-strong bg-white px-6 font-bold no-underline">ดูงานรอฉัน</a>
+    </div>
+  </div>
+
+      <!-- บล็อกส้ม 1 บล็อกต่อหน้า (กฎแบรนด์) — ตัวอักษรบนส้มเป็นสี ink เสมอ / แสดงเฉพาะโมดูลที่เปิดแล้ว -->
+    <div class="flex min-w-0 flex-[1_1_320px] flex-col bg-orange px-6 pb-2 pt-6 text-ink md:px-8">
+      <h2 class="text-[13px] font-bold tracking-[0.12em]">ทำได้ทันที</h2>
+      <ul class="mt-3 flex flex-col">
+                  <li class="border-t-2 border-ink last:border-b-2">
+            <a href="../meetings/" class="group flex min-h-[64px] items-center justify-between gap-4 py-3 text-ink no-underline">
+              <span class="text-[22px] font-bold leading-snug group-hover:underline md:text-[26px]">รายงานการประชุม</span>
+              <span aria-hidden="true" class="shrink-0 text-lg font-bold">→</span>
+            </a>
+          </li>
+              </ul>
+    </div>
+  </section>
+
+<!-- ── งานของฉัน ───────────────────────────────────────── -->
+<section id="tasks" aria-labelledby="tasks-h" class="flex flex-col gap-5">
+  <div class="flex flex-wrap items-baseline justify-between gap-2">
+    <h2 id="tasks-h" class="text-[28px] font-bold leading-snug">งานของฉัน</h2>
+    <span role="link" aria-disabled="true" title="กำลังพัฒนา" class="cursor-not-allowed text-gray-700 text-[15px] font-bold" >ดูทั้งหมด<span class="sr-only"> (กำลังพัฒนา ยังใช้งานไม่ได้)</span></span>  </div>
+
+  <div class="grid grid-cols-2 gap-3 md:grid-cols-[repeat(auto-fit,minmax(220px,1fr))] md:gap-4">
+    <span role="link" aria-disabled="true" title="กำลังพัฒนา" class="cursor-not-allowed text-gray-700 flex flex-col gap-1 border border-line bg-white px-4 py-4 no-underline md:px-6 md:py-5" ><span class="text-sm text-gray-700">รอฉันอนุมัติ</span><span class="text-[32px] font-bold leading-tight md:text-[40px]">3</span><span class="text-sm text-status-pending font-bold">หนังสือ 2 · ใบลา 1</span><span class="sr-only"> (กำลังพัฒนา ยังใช้งานไม่ได้)</span></span><span role="link" aria-disabled="true" title="กำลังพัฒนา" class="cursor-not-allowed text-gray-700 flex flex-col gap-1 border border-line bg-white px-4 py-4 no-underline md:px-6 md:py-5" ><span class="text-sm text-gray-700">หนังสือของฉันที่รออยู่</span><span class="text-[32px] font-bold leading-tight md:text-[40px]">2</span><span class="text-sm text-status-revise font-bold">1 ฉบับถูกส่งกลับแก้ไข</span><span class="sr-only"> (กำลังพัฒนา ยังใช้งานไม่ได้)</span></span><a href="../hr/leave/" class="flex flex-col gap-1 border border-line bg-white px-4 py-4 no-underline md:px-6 md:py-5"><span class="text-sm text-gray-700">วันลาพักร้อนคงเหลือ</span><span class="text-[32px] font-bold leading-tight md:text-[40px]">10 <span class="text-lg">วัน</span></span><span class="text-sm text-gray-700">ดูรายละเอียดในหน้าการลา</span></a><span role="link" aria-disabled="true" title="กำลังพัฒนา" class="cursor-not-allowed text-gray-700 flex flex-col gap-1 border border-line bg-white px-4 py-4 no-underline md:px-6 md:py-5" ><span class="text-sm text-gray-700">อบรมที่ต้องเข้า</span><span class="text-[32px] font-bold leading-tight md:text-[40px]">1</span><span class="text-sm text-gray-700">มาตรฐาน Plot Style · 6 ชม.</span><span class="sr-only"> (กำลังพัฒนา ยังใช้งานไม่ได้)</span></span>  </div>
+
+      <!-- ตารางเลื่อนแนวนอนได้บนจอแคบ -->
+    <div class="overflow-x-auto border border-line bg-white">
+      <table class="w-full min-w-[720px] border-collapse text-[15px]">
+        <caption class="sr-only">รายการล่าสุดที่เกี่ยวกับฉัน (ข้อมูลตัวอย่าง)</caption>
+        <thead>
+          <tr class="text-left text-[13px] text-gray-700">
+            <th scope="col" class="border-b border-line px-6 py-3 font-bold">เรื่อง</th>
+            <th scope="col" class="border-b border-line px-4 py-3 font-bold">ประเภท</th>
+            <th scope="col" class="border-b border-line px-4 py-3 font-bold">สถานะ</th>
+            <th scope="col" class="border-b border-line px-6 py-3 text-right font-bold">อัปเดต</th>
+          </tr>
+        </thead>
+        <tbody>
+                      <tr class="border-b border-line last:border-0 hover:bg-surface">
+              <td class="px-6 py-3.5">
+                <span role="link" aria-disabled="true" title="กำลังพัฒนา" class="cursor-not-allowed text-gray-700 font-bold no-underline" >ขอส่งแบบรูปรายการ งวดที่ 2<span class="sr-only"> (กำลังพัฒนา ยังใช้งานไม่ได้)</span></span><br>
+                <span class="text-sm text-gray-700">โครงการตัวอย่าง ก · ถึง หน่วยงานรัฐ (ตัวอย่าง)</span>
+              </td>
+              <td class="px-4 py-3.5">หนังสือราชการ</td>
+              <td class="px-4 py-3.5"><span class="inline-flex rounded-xs px-2.5 py-0.5 text-[13px] font-bold bg-status-pending-bg text-status-pending">รอฉันอนุมัติ</span></td>
+              <td class="whitespace-nowrap px-6 py-3.5 text-right text-gray-700">2 ชม.ที่แล้ว</td>
+            </tr>
+                      <tr class="border-b border-line last:border-0 hover:bg-surface">
+              <td class="px-6 py-3.5">
+                <span role="link" aria-disabled="true" title="กำลังพัฒนา" class="cursor-not-allowed text-gray-700 font-bold no-underline" >ขอลาพักร้อน 2 วัน<span class="sr-only"> (กำลังพัฒนา ยังใช้งานไม่ได้)</span></span><br>
+                <span class="text-sm text-gray-700">สมหญิง ตัวอย่าง · ฝ่ายออกแบบ</span>
+              </td>
+              <td class="px-4 py-3.5">ใบลา</td>
+              <td class="px-4 py-3.5"><span class="inline-flex rounded-xs px-2.5 py-0.5 text-[13px] font-bold bg-status-pending-bg text-status-pending">รอฉันอนุมัติ</span></td>
+              <td class="whitespace-nowrap px-6 py-3.5 text-right text-gray-700">เมื่อวาน</td>
+            </tr>
+                      <tr class="border-b border-line last:border-0 hover:bg-surface">
+              <td class="px-6 py-3.5">
+                <span role="link" aria-disabled="true" title="กำลังพัฒนา" class="cursor-not-allowed text-gray-700 font-bold no-underline" >บันทึกขอซื้อวัสดุสำนักงาน<span class="sr-only"> (กำลังพัฒนา ยังใช้งานไม่ได้)</span></span><br>
+                <span class="text-sm text-gray-700">GM.OD ขอให้แนบใบเสนอราคาเพิ่ม</span>
+              </td>
+              <td class="px-4 py-3.5">บันทึกภายใน</td>
+              <td class="px-4 py-3.5"><span class="inline-flex rounded-xs px-2.5 py-0.5 text-[13px] font-bold bg-status-revise-bg text-status-revise">ส่งกลับแก้ไข</span></td>
+              <td class="whitespace-nowrap px-6 py-3.5 text-right text-gray-700">เมื่อวาน</td>
+            </tr>
+                      <tr class="border-b border-line last:border-0 hover:bg-surface">
+              <td class="px-6 py-3.5">
+                <span role="link" aria-disabled="true" title="กำลังพัฒนา" class="cursor-not-allowed text-gray-700 font-bold no-underline" >แจ้งผู้รับจ้างเรื่องนัดตรวจรับงาน<span class="sr-only"> (กำลังพัฒนา ยังใช้งานไม่ได้)</span></span><br>
+                <span class="text-sm text-gray-700">โครงการตัวอย่าง ข · ลงนามแล้ว ส่ง PDF ได้</span>
+              </td>
+              <td class="px-4 py-3.5">หนังสือธุรกิจ</td>
+              <td class="px-4 py-3.5"><span class="inline-flex rounded-xs px-2.5 py-0.5 text-[13px] font-bold bg-status-approved-bg text-status-approved">อนุมัติแล้ว</span></td>
+              <td class="whitespace-nowrap px-6 py-3.5 text-right text-gray-700">3 วันก่อน</td>
+            </tr>
+                  </tbody>
+      </table>
+    </div>
+  </section>
+
+<section id="modules" aria-labelledby="mod-h" class="flex flex-col gap-5">
+  <div class="flex flex-col gap-1">
+    <h2 id="mod-h" class="text-[28px] font-bold leading-snug">ระบบของบริษัท</h2>
+    <p class="text-gray-700">เปิดใช้ได้แล้ว 1 ระบบ · ระบบอื่นทยอยเปิดเร็ว ๆ นี้</p>
+  </div>
+
+  <div class="grid grid-cols-[repeat(auto-fit,minmax(min(260px,100%),1fr))] gap-4">
+    <!-- การ์ดใหญ่เต็มแถว: รายงานการประชุม + น้องคำแพง (โมดูลที่เปิดใช้แล้ว) -->
+    <a href="../meetings/" class="group col-span-full flex flex-wrap items-end gap-x-8 gap-y-4 overflow-hidden bg-charcoal bg-[linear-gradient(rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)] bg-[size:32px_32px] px-8 pt-8 text-white no-underline transition-transform hover:-translate-y-0.5">
+      <img src="../mascots/kham-phaeng-512.webp" width="150" height="372" alt="" class="select-none -mb-2 w-[120px] shrink-0 origin-bottom group-hover:animate-wiggle sm:w-[130px]" draggable="false" loading="lazy">      <span class="flex min-w-0 flex-[1_1_320px] flex-col gap-2 pb-8">
+        <span class="flex flex-wrap items-center gap-2">
+          <span class="w-fit rounded-xs bg-orange px-2.5 py-0.5 text-[13px] font-bold text-ink">✦ ฟีเจอร์ใหม่</span>
+          <span class="w-fit rounded-xs border border-white/60 px-2.5 py-0.5 text-[13px] font-bold">เปิดใช้แล้ว</span>
+        </span>
+        <span class="text-[44px] font-bold leading-none text-orange md:text-[56px]">น้องคำแพง</span>
+        <span class="text-[20px] font-bold leading-snug md:text-[22px]">เลขาคู่ใจ จดครบทุกมติ ติดตามทุกงาน</span>
+        <span class="mt-2 text-[13px] font-bold tracking-[0.12em] text-white/70">โมดูล: รายงานการประชุม</span>
+        <span class="max-w-[34em]">บันทึกวาระ มติ และงานที่ต้องติดตาม ออกรายงาน PDF แบบหนังสือราชการ ประธานรับรองในระบบ</span>
+        <span class="mt-1 text-[15px] font-bold text-orange">เปิดรายงานการประชุม →</span>
+      </span>
+    </a>
+
+    <!-- โมดูลที่กำลังพัฒนา: ไม่ใช่ลิงก์ (กดไม่ได้) และบอกโปรแกรมอ่านหน้าจอว่ายังใช้ไม่ได้ -->
+          <div role="group" aria-label="ระบบหนังสือออก — กำลังพัฒนา ยังใช้งานไม่ได้" class="relative flex cursor-not-allowed flex-col justify-between gap-5 overflow-hidden border border-dashed border-line-strong bg-white p-6 sm:min-h-56 sm:p-7">
+        <span class="flex items-start justify-between gap-3">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="size-9 text-gray-700"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg>          <span class="inline-flex items-center gap-1.5 rounded-xs border border-dashed border-line-strong bg-surface px-2.5 py-1 text-[13px] font-bold text-gray-700">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-4"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg> กำลังพัฒนา
+          </span>
+        </span>
+        <span class="flex flex-col gap-1.5 pr-16">
+          <span class="text-xl font-bold leading-snug text-charcoal">ระบบหนังสือออก</span>
+          <span class="text-[15px] font-bold text-charcoal">อ้ายคำเขียน — ร่างเป็นเรื่อง เลขเป็นระบบ ครบทุกหนังสือออก</span>          <span class="text-[15px] text-gray-700">ร่างหนังสือด้วย AI ส่งอนุมัติตามผังองค์กร ออก PDF ลงนาม</span>
+        </span>
+        <img src="../mascots/kham-khian-256.webp" width="80" height="133" alt="" class="select-none pointer-events-none absolute -bottom-2 right-2 w-[68px] opacity-50 grayscale" draggable="false" loading="lazy">      </div>
+          <div role="group" aria-label="HR — กำลังพัฒนา ยังใช้งานไม่ได้" class="relative flex cursor-not-allowed flex-col justify-between gap-5 overflow-hidden border border-dashed border-line-strong bg-white p-6 sm:min-h-56 sm:p-7">
+        <span class="flex items-start justify-between gap-3">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="size-9 text-gray-700"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18.5 14.8c1.6.8 2.6 2.6 3 5.2"/></svg>          <span class="inline-flex items-center gap-1.5 rounded-xs border border-dashed border-line-strong bg-surface px-2.5 py-1 text-[13px] font-bold text-gray-700">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-4"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg> กำลังพัฒนา
+          </span>
+        </span>
+        <span class="flex flex-col gap-1.5 pr-16">
+          <span class="text-xl font-bold leading-snug text-charcoal">HR</span>
+                    <span class="text-[15px] text-gray-700">ข้อมูลพนักงาน ลา ลงเวลา ประเมินผล และอบรม</span>
+        </span>
+        <img src="../mascots/khwan-khao-full-256.webp" width="80" height="144" alt="" class="select-none pointer-events-none absolute -bottom-2 right-2 w-[68px] opacity-50 grayscale" draggable="false" loading="lazy">      </div>
+          <div role="group" aria-label="ลูกค้าและคู่ค้า — กำลังพัฒนา ยังใช้งานไม่ได้" class="relative flex cursor-not-allowed flex-col justify-between gap-5 overflow-hidden border border-dashed border-line-strong bg-white p-6 sm:min-h-56 sm:p-7">
+        <span class="flex items-start justify-between gap-3">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="size-9 text-gray-700"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-5h6v5M9 10h.01M15 10h.01"/></svg>          <span class="inline-flex items-center gap-1.5 rounded-xs border border-dashed border-line-strong bg-surface px-2.5 py-1 text-[13px] font-bold text-gray-700">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-4"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg> กำลังพัฒนา
+          </span>
+        </span>
+        <span class="flex flex-col gap-1.5 pr-16">
+          <span class="text-xl font-bold leading-snug text-charcoal">ลูกค้าและคู่ค้า</span>
+                    <span class="text-[15px] text-gray-700">ทะเบียนกลางหน่วยงานรัฐ เอกชน ผู้รับจ้าง ที่ปรึกษา</span>
+        </span>
+        <img src="../mascots/wao-full-256.webp" width="80" height="137" alt="" class="select-none pointer-events-none absolute -bottom-2 right-2 w-[68px] opacity-50 grayscale" draggable="false" loading="lazy">      </div>
+          <div role="group" aria-label="ผู้ช่วย AI — กำลังพัฒนา ยังใช้งานไม่ได้" class="relative flex cursor-not-allowed flex-col justify-between gap-5 overflow-hidden border border-dashed border-line-strong bg-white p-6 sm:min-h-56 sm:p-7">
+        <span class="flex items-start justify-between gap-3">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="size-9 text-gray-700"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 16l.7 2.3L22 19l-2.3.7L19 22l-.7-2.3L16 19l2.3-.7z"/></svg>          <span class="inline-flex items-center gap-1.5 rounded-xs border border-dashed border-line-strong bg-surface px-2.5 py-1 text-[13px] font-bold text-gray-700">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-4"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg> กำลังพัฒนา
+          </span>
+        </span>
+        <span class="flex flex-col gap-1.5 pr-16">
+          <span class="text-xl font-bold leading-snug text-charcoal">ผู้ช่วย AI</span>
+                    <span class="text-[15px] text-gray-700">ร่างข้อความ สรุปประชุม ถามระเบียบบริษัท</span>
+        </span>
+        <img src="../mascots/khao-ji-256.webp" width="80" height="109" alt="" class="select-none pointer-events-none absolute -bottom-2 right-2 w-[68px] opacity-50 grayscale" draggable="false" loading="lazy">      </div>
+          <div role="group" aria-label="คู่มือและแบบฟอร์ม — กำลังพัฒนา ยังใช้งานไม่ได้" class="relative flex cursor-not-allowed flex-col justify-between gap-5 overflow-hidden border border-dashed border-line-strong bg-white p-6 sm:min-h-56 sm:p-7">
+        <span class="flex items-start justify-between gap-3">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="size-9 text-gray-700"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5M8 7h7M8 11h5"/></svg>          <span class="inline-flex items-center gap-1.5 rounded-xs border border-dashed border-line-strong bg-surface px-2.5 py-1 text-[13px] font-bold text-gray-700">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-4"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg> กำลังพัฒนา
+          </span>
+        </span>
+        <span class="flex flex-col gap-1.5 pr-16">
+          <span class="text-xl font-bold leading-snug text-charcoal">คู่มือและแบบฟอร์ม</span>
+                    <span class="text-[15px] text-gray-700">วิธีใช้ทุกระบบแบบทีละขั้น พร้อมรูปประกอบ</span>
+        </span>
+        <img src="../mascots/manual-256.webp" width="80" height="126" alt="" class="select-none pointer-events-none absolute -bottom-2 right-2 w-[68px] opacity-50 grayscale" draggable="false" loading="lazy">      </div>
+      </div>
+</section>
+
+<!-- ── เริ่มใช้งาน ─────────────────────────────────────── -->
+<section aria-labelledby="start-h" class="flex flex-col gap-5">
+  <h2 id="start-h" class="text-[28px] font-bold leading-snug">เริ่มใช้งานใน 3 ขั้น</h2>
+  <ol class="grid grid-cols-[repeat(auto-fit,minmax(min(260px,100%),1fr))] gap-4">
+          <li class="flex flex-col gap-2 border border-line bg-white p-7">
+        <span class="text-5xl font-bold leading-none text-charcoal">1</span>
+        <span class="text-xl font-bold">เข้าระบบด้วยอีเมลบริษัท</span>
+        <span class="text-[15px] text-gray-700">ไม่ต้องจำรหัสใหม่ ใช้บัญชีเดียวทุกระบบ</span>
+      </li>
+          <li class="flex flex-col gap-2 border border-line bg-white p-7">
+        <span class="text-5xl font-bold leading-none text-charcoal">2</span>
+        <span class="text-xl font-bold">ตรวจข้อมูลตัวเองและลายเซ็น</span>
+        <span class="text-[15px] text-gray-700">ชื่อ ตำแหน่ง ฝ่าย และอัปโหลดลายเซ็นสำหรับหนังสือ</span>
+      </li>
+          <li class="flex flex-col gap-2 border border-line bg-white p-7">
+        <span class="text-5xl font-bold leading-none text-charcoal">3</span>
+        <span class="text-xl font-bold">ลองเปิดรายงานการประชุม</span>
+        <span class="text-[15px] text-gray-700">ดูวิธีบันทึกวาระ มติ และงานที่ต้องติดตาม ในระบบที่เปิดใช้แล้ว</span>
+      </li>
+      </ol>
+</section>
+
+<!-- ── ประกาศ ───────────────────────────────────────────── -->
+<section aria-labelledby="news-h" class="flex flex-col gap-5">
+  <div class="flex flex-wrap items-baseline justify-between gap-2">
+    <h2 id="news-h" class="text-[28px] font-bold leading-snug">ประกาศบริษัท</h2>
+    <span role="link" aria-disabled="true" title="กำลังพัฒนา" class="cursor-not-allowed text-gray-700 text-[15px] font-bold" >ดูทั้งหมด<span class="sr-only"> (กำลังพัฒนา ยังใช้งานไม่ได้)</span></span>  </div>
+      <div class="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-2">
+      <span role="link" aria-disabled="true" title="กำลังพัฒนา" class="cursor-not-allowed text-gray-700 flex w-[min(340px,85vw)] shrink-0 snap-start flex-col gap-2 border border-line bg-white p-6 no-underline" ><span class="text-[13px] font-bold text-gray-700">นโยบาย · ฝ่ายบริหาร</span><span class="text-lg font-bold leading-normal">แนวทางใช้ AI ในงานของบริษัท</span><span class="text-[15px] text-gray-700">ข้อมูลอะไรใส่ได้ อะไรห้ามใส่ ตามหลัก PDPA</span><span class="sr-only"> (กำลังพัฒนา ยังใช้งานไม่ได้)</span></span><span role="link" aria-disabled="true" title="กำลังพัฒนา" class="cursor-not-allowed text-gray-700 flex w-[min(340px,85vw)] shrink-0 snap-start flex-col gap-2 border border-line bg-white p-6 no-underline" ><span class="text-[13px] font-bold text-gray-700">อบรม · ฝ่ายออกแบบ</span><span class="text-lg font-bold leading-normal">มาตรฐานสีและเส้น AutoCAD (Plot Style)</span><span class="text-[15px] text-gray-700">วันที่ [ระบุ] · ลงทะเบียนในระบบ HR</span><span class="sr-only"> (กำลังพัฒนา ยังใช้งานไม่ได้)</span></span><span role="link" aria-disabled="true" title="กำลังพัฒนา" class="cursor-not-allowed text-gray-700 flex w-[min(340px,85vw)] shrink-0 snap-start flex-col gap-2 border border-line bg-white p-6 no-underline" ><span class="text-[13px] font-bold text-gray-700">ระบบ · ทีมพัฒนา</span><span class="text-lg font-bold leading-normal">ปิดปรับปรุงระบบชั่วคราว</span><span class="text-[15px] text-gray-700">วันที่ [ระบุ] เวลา [ระบุ] — บันทึกงานไว้ก่อน</span><span class="sr-only"> (กำลังพัฒนา ยังใช้งานไม่ได้)</span></span><span role="link" aria-disabled="true" title="กำลังพัฒนา" class="cursor-not-allowed text-gray-700 flex w-[min(340px,85vw)] shrink-0 snap-start flex-col gap-2 border border-line bg-white p-6 no-underline" ><span class="text-[13px] font-bold text-gray-700">สำนักงาน · GM.OD</span><span class="text-lg font-bold leading-normal">วันหยุดประจำปี 2570</span><span class="text-[15px] text-gray-700">ดูปฏิทินวันหยุดและวางแผนลาล่วงหน้า</span><span class="sr-only"> (กำลังพัฒนา ยังใช้งานไม่ได้)</span></span>    </div>
+  </section>
+  </main>
+  <footer class="bg-charcoal pb-20 text-white lg:pb-0">
+  <div class="mx-auto flex max-w-[1200px] flex-wrap justify-between gap-8 px-6 py-10">
+    <div class="flex flex-[1_1_320px] flex-col gap-1.5">
+      <span class="text-lg font-bold tracking-[0.08em]">TOGETHER <span class="text-orange">HUB</span></span>
+      <span class="text-sm">บจก.ทูเก็ตเตอร์ แอสโซซิเอทส์ · ระบบภายในสำหรับพนักงาน</span>
+      <span class="text-sm">เวอร์ชัน V_0.1 (PHP)</span>
+    </div>
+    <nav aria-label="ลิงก์ท้ายหน้า" class="flex flex-wrap items-start gap-x-6 gap-y-2 text-sm">
+      <a href="#" data-demo-missing class="text-white">นโยบายความเป็นส่วนตัว (PDPA)</a>
+      <a href="#" data-demo-missing class="text-white">คู่มือการใช้งาน</a>
+      <a href="#" data-demo-missing class="text-white">แจ้งปัญหาการใช้งาน</a>
+      <form action="#" data-demo-next="../" method="post">
+                <button type="submit" class="text-white underline">ออกจากระบบ</button>
+      </form>
+    </nav>
+  </div>
+</footer>
+  <!-- แถบแจ้งเรื่องข้อมูลส่วนบุคคล (PDPA) — ซ่อนไว้ก่อน สคริปต์เปิดให้ถ้ายังไม่เคยกดรับทราบในเครื่องนี้ -->
+<div role="region" aria-label="ความเป็นส่วนตัว" data-consent hidden class="fixed inset-x-0 bottom-[72px] z-40 border-t border-line-strong bg-white lg:bottom-0">
+  <div class="mx-auto flex max-w-[1200px] flex-wrap items-center gap-x-6 gap-y-3 px-4 py-4 md:px-6">
+    <p class="flex-[1_1_480px] text-sm text-charcoal">
+      ระบบนี้เก็บข้อมูลเท่าที่จำเป็นต่อการทำงาน เช่น เวลาเข้า-ออกงานและประวัติอนุมัติ
+      ตามนโยบายความเป็นส่วนตัวของบริษัท คุกกี้วิเคราะห์การใช้งานจะเปิดเมื่อคุณยินยอมเท่านั้น
+    </p>
+    <div class="flex gap-2">
+      <a href="#" data-demo-missing class="flex h-11 items-center rounded-xs border border-line-strong px-4 text-[15px] font-bold no-underline">ตั้งค่า</a>
+      <button type="button" data-consent-accept class="h-11 rounded-xs bg-charcoal px-5 text-[15px] font-bold text-white">รับทราบ</button>
+    </div>
+  </div>
+</div>
+  <nav aria-label="เมนูหลัก" class="fixed inset-x-0 bottom-0 z-50 grid h-[72px] grid-cols-5 border-t border-line bg-white lg:hidden">
+  <a href="../home/" class="flex flex-col items-center justify-center gap-0.5 text-xs no-underline border-t-[3px] border-orange font-bold text-ink" aria-current="page"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-[22px]"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg>หน้าแรก</a><span role="link" aria-disabled="true" title="กำลังพัฒนา" class="cursor-not-allowed text-gray-700 flex flex-col items-center justify-center gap-0.5 text-xs no-underline text-gray-700" ><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="size-[22px]"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg>หนังสือ<span class="sr-only"> (กำลังพัฒนา ยังใช้งานไม่ได้)</span></span><span role="link" aria-disabled="true" title="กำลังพัฒนา" class="cursor-not-allowed text-gray-700 flex flex-col items-center justify-center gap-0.5 text-xs no-underline text-gray-700" ><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="size-[22px]"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18.5 14.8c1.6.8 2.6 2.6 3 5.2"/></svg>HR<span class="sr-only"> (กำลังพัฒนา ยังใช้งานไม่ได้)</span></span><span role="link" aria-disabled="true" title="กำลังพัฒนา" class="cursor-not-allowed text-gray-700 flex flex-col items-center justify-center gap-0.5 text-xs no-underline text-gray-700" ><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="size-[22px]"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-5h6v5M9 10h.01M15 10h.01"/></svg>ลูกค้า<span class="sr-only"> (กำลังพัฒนา ยังใช้งานไม่ได้)</span></span><span role="link" aria-disabled="true" title="กำลังพัฒนา" class="cursor-not-allowed text-gray-700 flex flex-col items-center justify-center gap-0.5 text-xs no-underline text-gray-700" ><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-[22px]"><path d="M4 6h16M4 12h16M4 18h16"/></svg>เพิ่มเติม<span class="sr-only"> (กำลังพัฒนา ยังใช้งานไม่ได้)</span></span></nav>
+</div>
+</body>
+</html>

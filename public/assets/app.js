@@ -10,7 +10,15 @@
     try { return window[kind]; } catch (e) { return null; }
   };
 
+  // เว็บตัวอย่างบน GitHub Pages (หน้าเว็บนิ่ง ไม่มี server) — ดู tools/build_demo.py
+  var DEMO = !!document.querySelector('meta[name="tg-demo"]');
+
   function post(url) {
+    if (DEMO) {
+      var now = new Date();
+      var hhmm = ('0' + now.getHours()).slice(-2) + ':' + ('0' + now.getMinutes()).slice(-2);
+      return Promise.resolve(url === '/api/checkin' ? { time: hhmm } : { ok: true });
+    }
     return fetch(url, {
       method: 'POST',
       headers: { 'X-CSRF-Token': csrf, 'Accept': 'application/json' },
@@ -40,9 +48,24 @@
     f.addEventListener('submit', function () { zap($('[data-brand-logo][data-zap]')); });
   });
 
+  // ── เว็บตัวอย่าง: ไม่ส่งฟอร์มจริง พาไปหน้าผลลัพธ์ที่เตรียมไว้ ──────────────────
+  if (DEMO) {
+    $$('form').forEach(function (f) {
+      f.addEventListener('submit', function (ev) {
+        ev.preventDefault();
+        var next = f.getAttribute('data-demo-next');
+        setTimeout(function () { if (next) location.href = next; }, 450);
+      });
+    });
+    $$('a[data-demo-missing]').forEach(function (a) {
+      a.addEventListener('click', function (ev) { ev.preventDefault(); }); // หน้านี้ยังไม่มีในเว็บตัวอย่าง
+    });
+  }
+
   // ── ปุ่มส่งฟอร์ม: ขึ้นข้อความ "กำลัง…" และกันกดซ้ำ ────────────────────────────
   $$('form').forEach(function (f) {
     f.addEventListener('submit', function () {
+      if (DEMO && !f.getAttribute('data-demo-next')) return;
       var btn = $('button[type="submit"][data-busy-text]', f);
       if (!btn) return;
       setTimeout(function () { btn.disabled = true; btn.textContent = btn.dataset.busyText; }, 0);

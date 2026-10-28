@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta name="tg-demo" content="1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>ขอลาใหม่ · Together Hub</title>
+<link rel="stylesheet" href="../../../assets/app.css">
+<script src="../../../assets/app.js" defer></script>
+</head>
+<body>
+<div style="background:#040606;color:#fff;font-size:14px;line-height:1.5;padding:8px 16px;text-align:center;position:relative;z-index:60"><b style="color:#ff7e1c">เว็บตัวอย่าง (Demo)</b> · ข้อมูลสมมติทั้งหมด · ปุ่มบันทึกและส่งข้อมูลไม่ทำงานจริง — ระบบจริงติดตั้งบนเซิร์ฟเวอร์บริษัท</div>
+<div class="min-h-screen">
+  <header class="border-b border-line bg-white">
+  <div class="mx-auto flex max-w-[1200px] flex-wrap items-center gap-x-3 gap-y-3 px-4 py-3 md:gap-x-8 md:px-6">
+    <a href="../../../home/" aria-label="Together Hub หน้าแรก" class="flex shrink-0 items-center no-underline">
+      <span class="relative inline-block w-fit self-start" data-brand-logo>
+  <img src="../../../brand/together-hub-logo-160.webp" width="591" height="160" alt="Together Hub" class="select-none h-10 w-auto lg:h-12" draggable="false">
+  <svg aria-hidden="true" viewBox="0 0 1645 445" class="pointer-events-none absolute inset-0 hidden h-full w-full overflow-visible" fill="none">
+    <defs>
+      <filter id="tg-zap-blur" x="-20%" y="-50%" width="140%" height="200%"><feGaussianBlur stdDeviation="9"/></filter>
+    </defs>
+    <circle class="tg-horn-l" cx="1318" cy="78" r="62" fill="#ff7e1c" filter="url(#tg-zap-blur)"/>
+    <circle class="tg-horn-r" cx="1577" cy="78" r="62" fill="#ff7e1c" filter="url(#tg-zap-blur)"/>
+        <path class="tg-zap" d="M1368,118 C1335,118 1300,114 1293,90 C1287,66 1318,48 1354,40 L1380,24 L1402,42 L1428,16 L1450,38 L1474,14 L1497,36 L1518,22 L1541,40 C1577,48 1608,66 1602,90 C1595,114 1560,118 1527,118" pathLength="100" stroke="#ff7e1c" stroke-width="34" stroke-linecap="round" stroke-linejoin="round" filter="url(#tg-zap-blur)"/>
+    <path class="tg-zap" d="M1368,118 C1335,118 1300,114 1293,90 C1287,66 1318,48 1354,40 L1380,24 L1402,42 L1428,16 L1450,38 L1474,14 L1497,36 L1518,22 L1541,40 C1577,48 1608,66 1602,90 C1595,114 1560,118 1527,118" pathLength="100" stroke="#ff9a3d" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+    <path class="tg-zap" d="M1368,118 C1335,118 1300,114 1293,90 C1287,66 1318,48 1354,40 L1380,24 L1402,42 L1428,16 L1450,38 L1474,14 L1497,36 L1518,22 L1541,40 C1577,48 1608,66 1602,90 C1595,114 1560,118 1527,118" pathLength="100" stroke="#fff4d6" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</span>
+    </a>
+
+    <!-- เมนูบนจอคอม (กว้าง 1024px ขึ้นไป) — จอเล็กกว่านั้นใช้แถบล่างแทน -->
+    <nav aria-label="เมนูหลัก" class="hidden flex-1 flex-nowrap gap-x-5 whitespace-nowrap text-[15px] lg:flex">
+      <a href="../../../home/" class="py-2 no-underline hover:text-charcoal" >หน้าแรก</a><span role="link" aria-disabled="true" title="กำลังพัฒนา" class="cursor-not-allowed text-gray-700 py-2 no-underline hover:text-charcoal" >หนังสือออก<span class="sr-only"> (กำลังพัฒนา ยังใช้งานไม่ได้)</span></span><span role="link" aria-disabled="true" title="กำลังพัฒนา" class="cursor-not-allowed text-gray-700 py-2 no-underline border-b-[3px] border-orange font-bold" aria-current="page">HR<span class="sr-only"> (กำลังพัฒนา ยังใช้งานไม่ได้)</span></span><span role="link" aria-disabled="true" title="กำลังพัฒนา" class="cursor-not-allowed text-gray-700 py-2 no-underline hover:text-charcoal" >ลูกค้าและคู่ค้า<span class="sr-only"> (กำลังพัฒนา ยังใช้งานไม่ได้)</span></span><span role="link" aria-disabled="true" title="กำลังพัฒนา" class="cursor-not-allowed text-gray-700 py-2 no-underline hover:text-charcoal" >ผู้ช่วย AI<span class="sr-only"> (กำลังพัฒนา ยังใช้งานไม่ได้)</span></span>    </nav>
+
+    <div class="ml-auto flex items-center gap-2 md:gap-3">
+      <label class="hidden h-11 w-60 items-center gap-2 rounded-xs border border-line-strong bg-white px-3 xl:flex">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-[18px] text-gray-700"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>        <span class="sr-only">ค้นหา</span>
+        <input type="search" placeholder="ค้นหนังสือ คน ลูกค้า…" class="min-w-0 flex-1 bg-transparent text-[15px] outline-none">
+      </label>
+      <button type="button" aria-label="การแจ้งเตือน 4 รายการ" class="relative flex size-11 items-center justify-center rounded-xs border border-line-strong bg-white">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-5"><path d="M6 8a6 6 0 1 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0"/></svg>                  <span class="absolute -right-1.5 -top-1.5 flex h-5 min-w-5 items-center justify-center rounded-full bg-status-rejected text-xs font-bold text-white">4</span>
+              </button>
+      <span title="สมชาย ตัวอย่าง · ฝ่ายออกแบบ" class="flex items-center gap-2.5">
+        <span class="flex size-10 items-center justify-center rounded-full bg-charcoal text-[15px] font-bold text-white">สต</span>
+        <span class="sr-only">สมชาย ตัวอย่าง สถาปนิก · ฝ่ายออกแบบ</span>
+      </span>
+      <form action="#" data-demo-next="../../../" method="post" class="hidden lg:block">
+                <button type="submit" class="h-11 px-2 text-sm font-bold text-gray-700 underline underline-offset-4">ออกจากระบบ</button>
+      </form>
+    </div>
+  </div>
+</header>
+  <main class="mx-auto flex max-w-[1200px] flex-col gap-12 px-4 pb-12 pt-6 md:px-6 md:pt-8">
+    <div class="flex flex-col gap-8">
+  <nav aria-label="ตำแหน่งหน้า" class="text-sm text-gray-700">
+    <a href="../../../home/">หน้าแรก</a> <span aria-hidden="true">›</span> <a href="../../../hr/leave/">การลา</a> <span aria-hidden="true">›</span> <span class="font-bold text-ink">ขอลาใหม่</span>
+  </nav>
+  <div>
+    <h1 class="text-[28px] font-bold leading-snug">ขอลาใหม่</h1>
+    <p class="text-gray-700">กรอก 3 อย่าง: ประเภท · วันที่ · เหตุผล แล้วกดส่งค่ะ</p>
+  </div>
+
+  <form action="#" data-demo-next="../../../hr/leave/sent/" method="post" enctype="multipart/form-data" novalidate data-leave-form
+        data-balances="{&quot;annual&quot;:10,&quot;sick&quot;:28,&quot;personal&quot;:5}" data-today="2026-10-29" data-cert-days="3"
+        class="flex max-w-[760px] flex-col gap-8">
+        <input type="hidden" name="MAX_FILE_SIZE" value="5242880">
+    
+    <!-- 1. ประเภทการลา -->
+    <fieldset class="flex flex-col gap-3" >
+      <legend class="mb-3 text-xl font-bold">1. ประเภทการลา</legend>
+      <div class="grid grid-cols-[repeat(auto-fit,minmax(min(200px,100%),1fr))] gap-3">
+                  <label class="flex cursor-pointer items-center gap-3 border-2 border-line bg-white px-4 py-3 has-[:checked]:border-ink has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-orange">
+            <input type="radio" name="type" value="annual"  class="size-5 accent-ink">
+            <span class="flex flex-col">
+              <span class="font-bold">ลาพักร้อน</span>
+              <span class="text-sm text-gray-700">เหลือ 10 วัน</span>
+            </span>
+          </label>
+                  <label class="flex cursor-pointer items-center gap-3 border-2 border-line bg-white px-4 py-3 has-[:checked]:border-ink has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-orange">
+            <input type="radio" name="type" value="sick"  class="size-5 accent-ink">
+            <span class="flex flex-col">
+              <span class="font-bold">ลาป่วย</span>
+              <span class="text-sm text-gray-700">เหลือ 28 วัน</span>
+            </span>
+          </label>
+                  <label class="flex cursor-pointer items-center gap-3 border-2 border-line bg-white px-4 py-3 has-[:checked]:border-ink has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-orange">
+            <input type="radio" name="type" value="personal"  class="size-5 accent-ink">
+            <span class="flex flex-col">
+              <span class="font-bold">ลากิจ</span>
+              <span class="text-sm text-gray-700">เหลือ 5 วัน</span>
+            </span>
+          </label>
+                  <label class="flex cursor-pointer items-center gap-3 border-2 border-line bg-white px-4 py-3 has-[:checked]:border-ink has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-orange">
+            <input type="radio" name="type" value="maternity"  class="size-5 accent-ink">
+            <span class="flex flex-col">
+              <span class="font-bold">ลาคลอด</span>
+              <span class="text-sm text-gray-700">ตามระเบียบบริษัท</span>
+            </span>
+          </label>
+                  <label class="flex cursor-pointer items-center gap-3 border-2 border-line bg-white px-4 py-3 has-[:checked]:border-ink has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-orange">
+            <input type="radio" name="type" value="other"  class="size-5 accent-ink">
+            <span class="flex flex-col">
+              <span class="font-bold">ลาอื่น ๆ</span>
+              <span class="text-sm text-gray-700">ตามระเบียบบริษัท</span>
+            </span>
+          </label>
+              </div>
+          </fieldset>
+
+    <!-- 2. วันที่ -->
+    <fieldset class="flex flex-col gap-4">
+      <legend class="mb-3 text-xl font-bold">2. วันที่ลา</legend>
+      <div class="grid grid-cols-[repeat(auto-fit,minmax(min(220px,100%),1fr))] gap-4">
+        <label class="flex flex-col gap-1.5">
+          <span class="font-bold">ตั้งแต่วันที่</span>
+          <input type="date" name="start" value="2026-10-29" class="h-12 w-full rounded-xs border border-line-strong bg-white px-3 text-base outline-none focus:border-ink focus:ring-2 focus:ring-orange" >
+                  </label>
+        <label class="flex flex-col gap-1.5">
+          <span class="font-bold">ถึงวันที่</span>
+          <input type="date" name="end" value="2026-10-29" min="2026-10-29" class="h-12 w-full rounded-xs border border-line-strong bg-white px-3 text-base outline-none focus:border-ink focus:ring-2 focus:ring-orange" >
+                  </label>
+      </div>
+
+      <!-- ครึ่งวัน: เลือกได้เฉพาะลาวันเดียว (สคริปต์ซ่อนเมื่อเลือกหลายวัน) -->
+      <div role="radiogroup" aria-label="ช่วงเวลา" data-half class="flex flex-wrap gap-2">
+                  <label class="flex h-11 cursor-pointer items-center gap-2 rounded-xs border border-line-strong bg-white px-4 has-[:checked]:border-ink has-[:checked]:bg-surface has-[:checked]:font-bold">
+            <input type="radio" name="halfDay" value="full" checked class="accent-ink"> เต็มวัน          </label>
+                  <label class="flex h-11 cursor-pointer items-center gap-2 rounded-xs border border-line-strong bg-white px-4 has-[:checked]:border-ink has-[:checked]:bg-surface has-[:checked]:font-bold">
+            <input type="radio" name="halfDay" value="morning"  class="accent-ink"> ครึ่งวันเช้า          </label>
+                  <label class="flex h-11 cursor-pointer items-center gap-2 rounded-xs border border-line-strong bg-white px-4 has-[:checked]:border-ink has-[:checked]:bg-surface has-[:checked]:font-bold">
+            <input type="radio" name="halfDay" value="afternoon"  class="accent-ink"> ครึ่งวันบ่าย          </label>
+              </div>
+
+      <p class="text-[15px]">รวม <b class="text-lg"><span data-days>–</span> วันทำงาน</b> <span class="text-gray-700">(ไม่นับเสาร์–อาทิตย์ · ระบบหักวันหยุดบริษัทให้ตอนส่ง)</span></p>
+      <p data-past hidden class="bg-status-revise-bg px-3 py-2 text-sm text-status-revise">เป็นการลาย้อนหลัง หัวหน้าอาจขอเหตุผลเพิ่มเติมนะคะ</p>
+    </fieldset>
+
+    <!-- 3. เหตุผล + ไฟล์แนบ -->
+    <fieldset class="flex flex-col gap-4">
+      <legend class="mb-3 text-xl font-bold">3. เหตุผล</legend>
+      <label class="flex flex-col gap-1.5">
+        <span class="font-bold">เหตุผลการลา</span>
+        <textarea name="reason" rows="3" maxlength="300" placeholder="เช่น พาคุณแม่ไปพบแพทย์"
+                  class="w-full rounded-xs border border-line-strong bg-white px-3 py-2.5 text-base outline-none focus:border-ink focus:ring-2 focus:ring-orange"
+                  ></textarea>
+              </label>
+      <label data-cert class="hidden flex-col gap-1.5">
+        <span class="font-bold">ใบรับรองแพทย์ (รูปถ่ายหรือ PDF ไม่เกิน 5 MB)</span>
+        <input type="file" name="cert" accept="image/jpeg,image/png,image/webp,image/heic,application/pdf"
+               class="text-[15px] file:mr-3 file:h-11 file:rounded-xs file:border file:border-line-strong file:bg-white file:px-4 file:font-bold"
+               >
+              </label>
+    </fieldset>
+
+    <!-- 4. สรุป + ส่ง -->
+    <section aria-labelledby="sum-h" class="flex flex-col gap-4 border border-line bg-white p-5">
+      <h2 id="sum-h" class="text-xl font-bold">4. ตรวจแล้วส่ง</h2>
+      <dl class="grid grid-cols-[auto_1fr] gap-x-6 gap-y-2 text-[15px]">
+        <dt class="text-gray-700">ประเภท</dt><dd class="font-bold" data-sum-type>—</dd>
+        <dt class="text-gray-700">จำนวน</dt><dd class="font-bold"><span data-sum-days>–</span> วัน</dd>
+        <dt class="text-gray-700" data-sum-left-label hidden>เหลือหลังลา</dt><dd class="font-bold" data-sum-left hidden></dd>
+        <dt class="text-gray-700">ผู้อนุมัติ</dt>
+        <dd class="font-bold">ออกแบบ ตัวอย่าง <span class="font-normal text-gray-700">(GM ฝ่ายออกแบบ)</span></dd>
+      </dl>
+      <p data-over hidden class="flex items-center gap-3 bg-status-revise-bg px-3 py-2 text-sm text-status-revise">
+        <img src="../../../mascots/khwan-khao-256.webp" width="40" height="37" alt="" class="select-none " draggable="false" loading="lazy">        วันลาประเภทนี้ไม่พอค่ะ ส่งได้ แต่ส่วนที่เกินอาจถูกนับเป็นลาไม่รับค่าจ้าง ลองคุยกับหัวหน้าก่อนนะคะ
+      </p>
+      <div class="flex flex-wrap gap-3">
+        <button type="submit" data-busy-text="กำลังส่ง…" class="h-12 rounded-xs bg-orange px-8 text-base font-bold text-ink hover:brightness-95 disabled:opacity-60">ส่งใบลา</button>
+        <a href="../../../hr/leave/" class="flex h-12 items-center rounded-xs border border-line-strong bg-white px-6 font-bold no-underline">ยกเลิก</a>
+      </div>
+    </section>
+  </form>
+</div>
+  </main>
+  <footer class="bg-charcoal pb-20 text-white lg:pb-0">
+  <div class="mx-auto flex max-w-[1200px] flex-wrap justify-between gap-8 px-6 py-10">
+    <div class="flex flex-[1_1_320px] flex-col gap-1.5">
+      <span class="text-lg font-bold tracking-[0.08em]">TOGETHER <span class="text-orange">HUB</span></span>
+      <span class="text-sm">บจก.ทูเก็ตเตอร์ แอสโซซิเอทส์ · ระบบภายในสำหรับพนักงาน</span>
+      <span class="text-sm">เวอร์ชัน V_0.1 (PHP)</span>
+    </div>
+    <nav aria-label="ลิงก์ท้ายหน้า" class="flex flex-wrap items-start gap-x-6 gap-y-2 text-sm">
+      <a href="#" data-demo-missing class="text-white">นโยบายความเป็นส่วนตัว (PDPA)</a>
+      <a href="#" data-demo-missing class="text-white">คู่มือการใช้งาน</a>
+      <a href="#" data-demo-missing class="text-white">แจ้งปัญหาการใช้งาน</a>
+      <form action="#" data-demo-next="../../../" method="post">
+                <button type="submit" class="text-white underline">ออกจากระบบ</button>
+      </form>
+    </nav>
+  </div>
+</footer>
+  <!-- แถบแจ้งเรื่องข้อมูลส่วนบุคคล (PDPA) — ซ่อนไว้ก่อน สคริปต์เปิดให้ถ้ายังไม่เคยกดรับทราบในเครื่องนี้ -->
+<div role="region" aria-label="ความเป็นส่วนตัว" data-consent hidden class="fixed inset-x-0 bottom-[72px] z-40 border-t border-line-strong bg-white lg:bottom-0">
+  <div class="mx-auto flex max-w-[1200px] flex-wrap items-center gap-x-6 gap-y-3 px-4 py-4 md:px-6">
+    <p class="flex-[1_1_480px] text-sm text-charcoal">
+      ระบบนี้เก็บข้อมูลเท่าที่จำเป็นต่อการทำงาน เช่น เวลาเข้า-ออกงานและประวัติอนุมัติ
+      ตามนโยบายความเป็นส่วนตัวของบริษัท คุกกี้วิเคราะห์การใช้งานจะเปิดเมื่อคุณยินยอมเท่านั้น
+    </p>
+    <div class="flex gap-2">
+      <a href="#" data-demo-missing class="flex h-11 items-center rounded-xs border border-line-strong px-4 text-[15px] font-bold no-underline">ตั้งค่า</a>
+      <button type="button" data-consent-accept class="h-11 rounded-xs bg-charcoal px-5 text-[15px] font-bold text-white">รับทราบ</button>
+    </div>
+  </div>
+</div>
+  <nav aria-label="เมนูหลัก" class="fixed inset-x-0 bottom-0 z-50 grid h-[72px] grid-cols-5 border-t border-line bg-white lg:hidden">
+  <a href="../../../home/" class="flex flex-col items-center justify-center gap-0.5 text-xs no-underline text-gray-700" ><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-[22px]"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg>หน้าแรก</a><span role="link" aria-disabled="true" title="กำลังพัฒนา" class="cursor-not-allowed text-gray-700 flex flex-col items-center justify-center gap-0.5 text-xs no-underline text-gray-700" ><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="size-[22px]"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg>หนังสือ<span class="sr-only"> (กำลังพัฒนา ยังใช้งานไม่ได้)</span></span><span role="link" aria-disabled="true" title="กำลังพัฒนา" class="cursor-not-allowed text-gray-700 flex flex-col items-center justify-center gap-0.5 text-xs no-underline border-t-[3px] border-orange font-bold text-ink" aria-current="page"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="size-[22px]"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18.5 14.8c1.6.8 2.6 2.6 3 5.2"/></svg>HR<span class="sr-only"> (กำลังพัฒนา ยังใช้งานไม่ได้)</span></span><span role="link" aria-disabled="true" title="กำลังพัฒนา" class="cursor-not-allowed text-gray-700 flex flex-col items-center justify-center gap-0.5 text-xs no-underline text-gray-700" ><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="size-[22px]"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-5h6v5M9 10h.01M15 10h.01"/></svg>ลูกค้า<span class="sr-only"> (กำลังพัฒนา ยังใช้งานไม่ได้)</span></span><span role="link" aria-disabled="true" title="กำลังพัฒนา" class="cursor-not-allowed text-gray-700 flex flex-col items-center justify-center gap-0.5 text-xs no-underline text-gray-700" ><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-[22px]"><path d="M4 6h16M4 12h16M4 18h16"/></svg>เพิ่มเติม<span class="sr-only"> (กำลังพัฒนา ยังใช้งานไม่ได้)</span></span></nav>
+</div>
+</body>
+</html>
