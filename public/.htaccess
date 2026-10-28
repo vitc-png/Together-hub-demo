@@ -1,0 +1,5 @@
+# Apache: ส่งทุกคำขอที่ไม่ใช่ไฟล์จริงไปที่ index.php
+Options -Indexes
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [L]

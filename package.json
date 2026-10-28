@@ -1,0 +1,14 @@
+{
+  "name": "together-hub-php",
+  "private": true,
+  "description": "ใช้สร้างไฟล์ CSS เท่านั้น — ตัวเว็บเป็น PHP ไม่ต้องใช้ Node ตอนใช้งานจริง",
+  "type": "module",
+  "scripts": {
+    "build:css": "node tailwind/build.mjs"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "4.1.13",
+    "postcss": "8.5.30",
+    "tailwindcss": "4.1.13"
+  }
+}

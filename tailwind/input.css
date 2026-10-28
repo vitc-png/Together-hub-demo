@@ -1,0 +1,117 @@
+/*
+ * แหล่ง CSS ของ Together Hub (Tailwind CSS 4)
+ * แก้ไฟล์นี้แล้วสร้างใหม่ด้วย:  npm install && npm run build:css   → ได้ public/assets/app.css
+ * ระบบจริงไม่ต้องมี Node — ใช้ไฟล์ app.css ที่สร้างไว้แล้วได้เลย
+ */
+@import "tailwindcss";
+
+/* ให้ Tailwind หาชื่อคลาสจากหน้า PHP และสคริปต์ */
+@source "../views";
+@source "../src";
+@source "../public/assets/app.js";
+
+/* ฟอนต์ Prompt เก็บในเว็บเราเอง (ไม่ดึงจาก Google — เร็วกว่า และไม่ส่งข้อมูลผู้ใช้ออกไปข้างนอก) */
+@font-face { font-family: 'Prompt'; font-style: normal; font-display: swap; font-weight: 400; src: url(./fonts/prompt-thai-400-normal.woff2) format('woff2'); unicode-range: U+02D7,U+0303,U+0331,U+0E01-0E5B,U+200C-200D,U+25CC; }
+@font-face { font-family: 'Prompt'; font-style: normal; font-display: swap; font-weight: 400; src: url(./fonts/prompt-latin-400-normal.woff2) format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family: 'Prompt'; font-style: normal; font-display: swap; font-weight: 700; src: url(./fonts/prompt-thai-700-normal.woff2) format('woff2'); unicode-range: U+02D7,U+0303,U+0331,U+0E01-0E5B,U+200C-200D,U+25CC; }
+@font-face { font-family: 'Prompt'; font-style: normal; font-display: swap; font-weight: 700; src: url(./fonts/prompt-latin-700-normal.woff2) format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+
+
+/*
+ * ชุดสี/ฟอนต์ Together Group (ดึงจาก design system ของบริษัท)
+ * ใช้ในโค้ดเป็นชื่อคลาส เช่น bg-orange, text-ink, text-status-pending
+ * แก้ค่าที่นี่ที่เดียว ทุกหน้าเปลี่ยนตาม
+ */
+@theme {
+  --font-sans: "Prompt", "Kanit", system-ui, sans-serif;
+
+  /* สีแบรนด์ */
+  --color-orange: #ff7e1c;      /* สีเด่นสีเดียว — ตัวอักษรบนส้มต้องเป็น ink */
+  --color-ink: #040606;         /* ตัวอักษรหลัก */
+  --color-charcoal: #313131;    /* พื้นเข้ม / wordmark */
+  --color-gray: #737373;        /* ตัวรองบนพื้นขาวเท่านั้น */
+  --color-gray-700: #5c5c5c;    /* ตัวรองบนพื้น surface */
+  --color-white: #ffffff;
+
+  /* พื้นและเส้นของหน้าเว็บ */
+  --color-surface: #f6f5f3;
+  --color-line: #e2e0dc;        /* เส้นแบ่ง (ตกแต่ง) */
+  --color-line-strong: #8f8a83; /* ขอบช่องกรอก ปุ่มรอง */
+
+  /* สถานะเอกสาร — ใช้คู่กับคำเสมอ */
+  --color-status-pending: #1d5fa8;
+  --color-status-pending-bg: #e8f0fa;
+  --color-status-approved: #1e7a3d;
+  --color-status-approved-bg: #e7f4ec;
+  --color-status-revise: #8a5a00;
+  --color-status-revise-bg: #fdf3e1;
+  --color-status-rejected: #b42318;
+  --color-status-rejected-bg: #fdecea;
+
+  /* มุม: แบรนด์ใช้มุมเหลี่ยม ปุ่ม/ช่องกรอกโค้งนิดเดียว */
+  --radius-xs: 4px;
+
+  /* แถบคำสั่งเลื่อนวนในหน้า hub */
+  --animate-roll: roll 18s linear infinite;
+  @keyframes roll {
+    from { transform: translateY(0); }
+    to { transform: translateY(-50%); }
+  }
+
+  /* มาสคอต: โยกตัวทักทาย และเด้งขึ้นมาตอนปรากฏ */
+  --animate-wiggle: wiggle 0.6s ease-in-out;
+  @keyframes wiggle {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-6deg); }
+    75% { transform: rotate(6deg); }
+  }
+  /* น้องเว้า: เด้งเบา ๆ 2 ครั้งเหมือนกำลังพูด */
+  --animate-talk: talk 0.8s ease-in-out;
+  @keyframes talk {
+    0%, 50%, 100% { transform: translateY(0) scale(1); }
+    25%, 75% { transform: translateY(-4px) scale(1.03); }
+  }
+  /* ซองจดหมายลอยขึ้นลงเบา ๆ 3 รอบแล้วหยุด (ไม่วนตลอด จะได้ไม่รบกวน) */
+  --animate-float: float 1.6s ease-in-out 3;
+  @keyframes float {
+    0%, 100% { translate: 0 0; }
+    50% { translate: 0 -6px; }
+  }
+  --animate-pop: pop 0.35s cubic-bezier(.2,1.4,.4,1) both;
+  @keyframes pop {
+    from { transform: translateY(12px) scale(.9); opacity: 0; }
+    to { transform: none; opacity: 1; }
+  }
+}
+
+html {
+  background: var(--color-surface);
+  color: var(--color-ink);
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+/* ── โลโก้: ไฟฟ้าวิ่งระหว่างเขาน้อง 2 จังหวะ (เล่นครั้งเดียวที่หน้าแรก) ── */
+.tg-zap {
+  stroke-dasharray: 26 130;           /* หัวไฟยาว 26% ของเส้นทาง */
+  animation: tg-zap 0.9s cubic-bezier(0.45, 0, 0.55, 1) 0.35s 2 both;
+}
+@keyframes tg-zap {
+  0%   { stroke-dashoffset: 26; opacity: 1; }
+  90%  { opacity: 1; }
+  100% { stroke-dashoffset: -100; opacity: 0; }
+}
+.tg-horn-l, .tg-horn-r { opacity: 0; animation: 0.9s ease-out 0.35s 2 both; }
+.tg-horn-l { animation-name: tg-horn-l; }  /* ไฟเข้าที่เขาซ้าย */
+.tg-horn-r { animation-name: tg-horn-r; }  /* ไฟออกที่เขาขวา */
+@keyframes tg-horn-l { 0% { opacity: 0; } 12% { opacity: 0.85; } 40%, 100% { opacity: 0; } }
+@keyframes tg-horn-r { 0%, 62% { opacity: 0; } 88% { opacity: 0.85; } 100% { opacity: 0; } }
+
+/* คนที่ตั้งเครื่องให้ลดภาพเคลื่อนไหว จะไม่เห็นแถบเลื่อน */
+@media (prefers-reduced-motion: reduce) {
+  .animate-roll, .animate-wiggle, .animate-talk, .animate-pop, .animate-float { animation: none; }
+}

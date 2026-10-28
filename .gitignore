@@ -1,0 +1,7 @@
+.env
+node_modules/
+storage/sessions/*
+storage/leave-certs/*
+storage/mail/*
+storage/logs/*
+!storage/**/.gitkeep
